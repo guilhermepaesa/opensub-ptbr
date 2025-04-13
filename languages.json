@@ -219,6 +219,11 @@
     "iso": "por",
     "name": "Portuguese"
   },
+  "brazilian-portuguese": {
+  "id": "brazilian-portuguese",
+  "iso": "pt-br",
+  "name": "Portuguese (Brazil)"
+  },
   "romanian": {
     "id": "romanian",
     "iso": "ron",
