@@ -135,23 +135,19 @@ async function getsub(path) {
 }
 
 function sortByLang(subs = Array) {
-    console.log('[sortByLang] START - Processing subtitles:', subs?.length);
     try {
-        let sorted = {}
-        subs.map((e,
-            i) => {
-            if (sorted[e.lang.toLowerCase()]) {
-                sorted[e.lang.toLowerCase()].push(e)
-            } else {
-                sorted[e.lang.toLowerCase()] = [e]
-            }
-        })
-        console.log('[sortByLang] SUCCESS - Languages found:', Object.keys(sorted));
-        return sorted
-    } catch (err) {
-        console.error('[sortByLang] ERROR:', err);
-        return null
-    }
+    let sorted = {}
+    subs.map((e, i) => {
+      if (sorted[e.lang.toLowerCase()]) {
+        sorted[e.lang.toLowerCase()].push(e)
+      } else {
+        sorted[e.lang.toLowerCase()] = [e]
+      }
+    })
+    return sorted
+  } catch (err) {
+    return null
+  }
 }
 
 module.exports = { getOpenSubData, getsubs }
